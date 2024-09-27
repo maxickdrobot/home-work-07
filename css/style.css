@@ -1,0 +1,277 @@
+/* GENERAL */
+html,
+body {
+    height: 100%;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    background: url("../pictures/background.png") 0 0 / 25%;
+    color: #20262B;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input, 
+select{
+    width: 60%;
+    padding: 3px 1%;
+    font-size: 1.25rem;
+    border: 2px solid #20262B;
+    border-radius: 10px;
+}
+
+input:invalid {
+    border-color: red;
+    background-color: rgb(250, 241, 241);
+}
+
+input:not([type="submit"]):valid {
+    border-color: green;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin: 5px 10%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;    
+    text-transform: uppercase;
+    background-color: #20262B;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.header__logo {
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(48, 178, 238);
+}
+
+.special-header-symbols,
+.navmenu__link {
+    color: white;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.navmenu__item::after {
+    position: absolute;
+    content: "";
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(48, 178, 238);
+    transition: all 0.3s;
+}
+
+.navmenu__item:hover::after {
+    left: 0;
+}
+
+.navmenu__link {
+    display: block;
+    padding: 20px 20px;
+    transition: color 0.3s;
+}
+
+.navmenu__link--active,
+.navmenu__link:hover {
+    color: rgb(48, 178, 238);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: 50px auto;
+    flex: 1 1 auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 1%;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.582);
+    border: 2px  black;
+    border-radius: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #20262B;
+    color: rgb(48, 178, 238);
+    padding: 20px;
+}
+
+.registration__title, 
+.authorazation__title {
+    margin-bottom: 20px;
+}
+
+.registration-form__btn,
+.authorazation-form__btn,
+.search-form__btn {
+    margin: 0 auto;
+    padding: 10px 0px;
+    font-weight: bold;
+    background-color: #20262B;
+    color: white;
+    border: 2px solid #20262B;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.registration-form__btn:hover,
+.authorazation-form__btn:hover,
+.search-form__btn:hover {
+    color: rgb(48, 178, 238);
+    transform: scale(1.02);
+}
+
+
+
+/* AUTHORIZATION */
+.authorazation-form__item--special {
+    justify-content: start;
+}
+
+
+
+/* SEARCH */
+.search-form__blocks-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form__block {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+    margin: 10px 6%;
+}
+
+.search-form__item{
+    padding-top: 20px;
+    border-top: 1px solid gray;
+}
+
+.search-form__item--important {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+
+
+/* CATALOG */
+.cards-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+    margin-bottom: 25px;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #20262B;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card__image-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.card__image {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card__title {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card__description {
+    margin-bottom: 10px;
+}
+
+.card__link {
+    display: block;
+    padding: 10px 1%;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #20262B;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card__link:hover {
+    color: rgb(48, 178, 238);
+}
+
+.card__price {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}

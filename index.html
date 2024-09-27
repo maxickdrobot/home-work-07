@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зареєструватися</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo">
+                    Купи 
+                    <span class="special-header-symbols">кар</span>
+                </a>
+                <ul class="navmenu">
+                    <li class="navmenu__item">
+                        <a class="navmenu__link navmenu__link--active" href="#">Реєстрація</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="pages/authorization.html">Авторизація</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="pages/search.html">Пошук</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="pages/catalog.html">Каталог</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <section class="registration section">
+                <h1 class="registration__title">Реєстрація</h1>
+                <form action="https://fom.in.ua/echo" class="registration-form">
+                    <label class="registration-form__item">
+                        E-mail:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label class="registration-form__item">
+                        Придумайте пароль:
+                        <input type="password" name="password" required>
+                    </label>
+                    <label class="registration-form__item">
+                        Повторіть пароль:
+                        <input type="password" name="confirm-password" required>
+                    </label>
+                    <input class="registration-form__btn" type="submit" value="Зареєструватися">
+                </form>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">
+                Зроблено в 2024 році Дроботом Максимом
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

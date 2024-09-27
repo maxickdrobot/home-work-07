@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="../index.html" class="header__logo">
+                    Купи
+                    <span class="special-header-symbols">кар</span>
+                </a>
+                <ul class="navmenu">
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="../index.html">Реєстрація</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="authorization.html">Авторизація</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link navmenu__link--active" href="#">Пошук</a>
+                    </li>
+                    <li class="navmenu__item">
+                        <a class="navmenu__link" href="catalog.html">Каталог</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <section class="search section">
+                <h1 class="search__title">Пошук</h1>
+                <form action="https://fom.in.ua/echo" class="search-form">
+                    <div class="search-form__item">
+                        <p>Тип кузова:</p>
+                        <div class="search-form__blocks-wrap">
+                            <label class="search-form__block">
+                                Універсал
+                                <input type="checkbox" name="universal">
+                            </label>
+                            <label class="search-form__block">
+                                Седан
+                                <input type="checkbox" name="sedan">
+                            </label>
+                            <label class="search-form__block">
+                                Хетчбек
+                                <input type="checkbox" name="hatchback">
+                            </label>
+                            <label class="search-form__block">
+                                Кросовер
+                                <input type="checkbox" name="crossover">
+                            </label>
+                            <label class="search-form__block">
+                                Купе
+                                <input type="checkbox" name="coupe">
+                            </label>
+                            <label class="search-form__block">
+                                Кабріолет
+                                <input type="checkbox" name="convertible">
+                            </label>
+                        </div>
+                    </div>
+                    <label class="search-form__item">
+                        Марка:
+                        <select name="brand">
+                            <option value="all">Усі</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                            <option value="ford">Ford</option>
+                            <option value="skoda">Skoda</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="fiat">Fiat</option>
+                        </select>
+                    </label>
+                    <label class="search-form__item">
+                        Країна виробник:
+                        <select name="country">
+                            <option value="all">Усі</option>
+                            <option value="germany">Німеччина</option>
+                            <option value="usa">США</option>
+                            <option value="czech-republic">Чехія</option>
+                            <option value="japan">Японія</option>
+                            <option value="south-korea">Південна Корея</option>
+                            <option value="france">Франція</option>
+                            <option value="italy">Італія</option>
+                            <option value="uk">Велика Британія</option>
+                            <option value="sweden">Швеція</option>
+                        </select>
+                    </label>                    
+                    <div class="search-form__item search-form__item--important">
+                        Ціна:
+                        <div>
+                            <p>
+                                від
+                            </p>
+                            <input type="number" min="0" name="min-cost" value="0"> $
+                            <p>
+                                до
+                            </p>
+                            <input type="number" min="0" name="max-cost" value="9999999"> $
+                        </div>
+                    </div>
+                    <div class="search-form__item search-form__item--important">
+                        Рік:
+                        <div>
+                            <p>
+                                від
+                            </p>
+                            <input type="number" min="2000" name="min-year" value="2000"> рік
+                            <p>
+                                до
+                            </p>
+                            <input type="number" min="2000" name="max-year" value="2024"> рік
+                        </div>
+                    </div>
+                    <label class="search-form__item">
+                        Стан:
+                        <select name="state" multiple="multiple">
+                            <option value="all" selected>Усі</option>
+                            <option value="damaged">Бита</option>
+                            <option value="credit">У кредиті</option>
+                            <option value="not-cleared">Нерозмитнена</option>
+                            <option value="leased">Лізингова</option>
+                            <option value="auction">Аукціонна</option>
+                        </select>
+                    </label>
+                    <div class="search-form__item">
+                        <p>Тип палива:</p>
+                        <div class="search-form__blocks-wrap">
+                            <label class="search-form__block">
+                                Бензин
+                                <input type="checkbox" name="gasoline">
+                            </label>
+                            <label class="search-form__block">
+                                Газ
+                                <input type="checkbox" name="gas">
+                            </label>
+                            <label class="search-form__block">
+                                Дизель
+                                <input type="checkbox" name="diesel">
+                            </label>
+                            <label class="search-form__block">
+                                Електро
+                                <input type="checkbox" name="electro">
+                            </label>
+                            <label class="search-form__block">
+                                Гібрид (HEV)
+                                <input type="checkbox" name="hev">
+                            </label>
+                            <label class="search-form__block">
+                                Гібрид (PHEV)
+                                <input type="checkbox" name="phev">
+                            </label>
+                        </div>
+                    </div>
+                    <label class="search-form__item">
+                        Тип коробки передач:
+                        <select name="type-of-gearbox">
+                            <option value="all" selected>Усі</option>
+                            <option value="manual">Ручна / Механіка</option>
+                            <option value="automatic">Автомат</option>
+                            <option value="tiptronic">Типтронік</option>
+                            <option value="robot">Робот</option>
+                            <option value="cvt">Варіатор</option>
+                        </select>
+                    </label>
+                    <label class="search-form__item">
+                        Колір:
+                        <select name="color">
+                            <option value="all" selected>Усі</option>
+                            <option value="black">Чорний</option>
+                            <option value="red">Червоний</option>
+                            <option value="white">Білий</option>
+                            <option value="blue">Синій</option>
+                            <option value="gray">Сірий</option>
+                        </select>
+                    </label>
+                    <div class="search-form__item">
+                        <p>Комфорт:</p>
+                        <div class="search-form__blocks-wrap">
+                            <label class="search-form__block">
+                                Люк
+                                <input type="checkbox" name="sunroof">
+                            </label>
+                            <label class="search-form__block">
+                                Шкіряний салон
+                                <input type="checkbox" name="leather-seats">
+                            </label>
+                            <label class="search-form__block">
+                                Клімат-контроль
+                                <input type="checkbox" name="climate-control">
+                            </label>
+                            <label class="search-form__block">
+                                Підігрів сидінь
+                                <input type="checkbox" name="heated-seats">
+                            </label>
+                            <label class="search-form__block">
+                                Підігрів керма
+                                <input type="checkbox" name="heated-steering">
+                            </label>
+                            <label class="search-form__block">
+                                Електропривод сидінь
+                                <input type="checkbox" name="electric-seats">
+                            </label>
+                        </div>
+                    </div>                    
+                    <input class="search-form__btn" type="submit" value="Пошук"> 
+                </form>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">
+                Зроблено в 2024 році Дроботом Максимом
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
